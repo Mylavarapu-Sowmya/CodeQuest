@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeQuest | Login / Signup</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-bg-shape auth-shape-1"></div>
+  <div class="auth-bg-shape auth-shape-2"></div>
+
+  <div class="auth-container">
+    <div class="auth-card glass">
+      <div class="brand-block">
+        <h1>CodeQuest</h1>
+        <p class="subtitle">Modern Daily Coding Challenge Platform</p>
+      </div>
+
+      <div class="tab-buttons">
+        <button id="showLogin" class="tab-btn active" type="button">Login</button>
+        <button id="showSignup" class="tab-btn" type="button">Signup</button>
+      </div>
+
+      <form id="loginForm" class="form active">
+        <h2>Welcome Back</h2>
+        <input type="email" id="loginEmail" placeholder="Enter email" required />
+        <input type="password" id="loginPassword" placeholder="Enter password" required />
+        <button type="submit" class="primary-btn">Login</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+
+      <form id="signupForm" class="form">
+  <h2>Create Account</h2>
+
+  <input
+    type="text"
+    id="signupUsername"
+    placeholder="Enter username"
+    required
+  />
+
+  <input
+    type="email"
+    id="signupEmail"
+    placeholder="Enter email"
+    required
+  />
+
+  <input
+    type="password"
+    id="signupPassword"
+    placeholder="Enter password"
+    required
+  />
+
+  <label class="upload-label">Upload Profile Image</label>
+  <input
+    type="file"
+    id="signupAvatar"
+    accept="image/*"
+  />
+
+  <button type="submit" class="primary-btn">
+    Create Account
+  </button>
+
+  <div class="avatar-preview-wrap">
+    <p class="small-label">Avatar Preview</p>
+
+    <img
+      id="avatarPreview"
+      class="avatar-preview"
+      src="https://api.dicebear.com/7.x/adventurer/svg?seed=CodeQuest"
+      alt="Avatar Preview"
+    />
+  </div>
+
+  <p id="signupMessage" class="message"></p>
+</form>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

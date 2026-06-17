@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard - CodeQuest</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CodeQuest</div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="leaderboard.html" class="active-link">Leaderboard</a>
+      <button id="themeToggle" class="secondary-btn" type="button">Toggle Theme</button>
+
+      <div class="nav-user-box">
+        <img id="navUserAvatar" class="nav-avatar" src="" alt="User Avatar" />
+        <button id="logoutBtn" class="danger-btn" type="button">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card glass">
+      <h1>Leaderboard</h1>
+      <p class="section-subtext">Track top coders, compare scores, and stay motivated.</p>
+      <div class="table-wrap">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Avatar</th>
+              <th>Username</th>
+              <th>Score</th>
+              <th>Badge</th>
+              <th>Streak</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>

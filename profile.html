@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - CodeQuest</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CodeQuest</div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html" class="active-link">Profile</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <button id="themeToggle" class="secondary-btn" type="button">Toggle Theme</button>
+
+      <div class="nav-user-box">
+        <img id="navUserAvatar" class="nav-avatar" src="" alt="User Avatar" />
+        <button id="logoutBtn" class="danger-btn" type="button">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card glass profile-hero">
+      <img id="profileAvatar" class="profile-avatar-large" src="" alt="Profile Avatar" />
+      <div class="profile-heading-content">
+        <h1>User Profile</h1>
+        <p>Your coding identity, challenge progress, and achievements in one place.</p>
+      </div>
+    </section>
+
+    <section class="card glass profile-card">
+      <div class="profile-info-grid">
+        <div><strong>Username</strong><span id="profileUsername"></span></div>
+        <div><strong>Email</strong><span id="profileEmail"></span></div>
+        <div><strong>Score</strong><span id="profileScore"></span></div>
+        <div><strong>Streak</strong><span id="profileStreak"></span></div>
+        <div><strong>Badge</strong><span id="profileBadge"></span></div>
+        <div><strong>Completed</strong><span id="profileCompleted"></span></div>
+        <div><strong>Joined Date</strong><span id="profileJoined"></span></div>
+        <div><strong>Last Login</strong><span id="profileLastLogin"></span></div>
+        <div><strong>Last Logout</strong><span id="profileLastLogout"></span></div>
+      </div>
+    </section>
+
+    <section class="card glass">
+      <h2>Achievements</h2>
+      <div id="achievementList" class="achievement-list"></div>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

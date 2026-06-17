@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CodeQuest</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CodeQuest</div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="dashboard.html" class="active-link">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <button id="themeToggle" class="secondary-btn" type="button">Toggle Theme</button>
+
+      <div class="nav-user-box">
+        <img id="navUserAvatar" class="nav-avatar" src="" alt="User Avatar" />
+        <button id="logoutBtn" class="danger-btn" type="button">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero-panel card glass">
+      <div>
+        <h1 id="welcomeUser">Welcome</h1>
+        <p>Practice coding every day, improve your logic, and level up your skills with beautiful progress tracking.</p>
+        <p class="small-info">Last login: <span id="lastLoginText">-</span></p>
+        <p class="small-info">Last logout: <span id="lastLogoutText">-</span></p>
+      </div>
+      <div class="hero-side-visual">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Coding setup">
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card glass">
+        <h3>Total Score</h3>
+        <p id="scoreValue">0</p>
+      </div>
+      <div class="stat-card glass">
+        <h3>Completed</h3>
+        <p id="completedValue">0</p>
+      </div>
+      <div class="stat-card glass">
+        <h3>Streak</h3>
+        <p id="streakValue">0</p>
+      </div>
+      <div class="stat-card glass">
+        <h3>Badge</h3>
+        <p id="badgeValue">Beginner</p>
+      </div>
+    </section>
+
+    <section class="progress-section card glass">
+      <h2>Your Progress</h2>
+
+      <div class="progress-item">
+        <label><span>Overall Progress</span><span id="overallProgressText">0%</span></label>
+        <div class="progress-bar">
+          <div id="overallProgressBar" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <label><span>Easy Challenges</span><span id="easyProgressText">0%</span></label>
+        <div class="progress-bar">
+          <div id="easyProgressBar" class="progress-fill easy"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <label><span>Medium Challenges</span><span id="mediumProgressText">0%</span></label>
+        <div class="progress-bar">
+          <div id="mediumProgressBar" class="progress-fill medium"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <label><span>Hard Challenges</span><span id="hardProgressText">0%</span></label>
+        <div class="progress-bar">
+          <div id="hardProgressBar" class="progress-fill hard"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card glass">
+      <div class="challenge-header">
+        <h2>Daily Challenges</h2>
+        <div class="filters">
+          <input type="text" id="searchInput" placeholder="Search challenge..." />
+          <select id="difficultyFilter">
+            <option value="All">All</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </div>
+      </div>
+      <div id="challengeList" class="challenge-list"></div>
+    </section>
+
+    <section class="card glass">
+      <h2>Learning Experiences</h2>
+      <div class="experience-grid">
+       <div class="experience-card">
+  <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Frontend coding">
+  <div>
+    <h3>Frontend Practice</h3>
+    <p>Master DOM, responsive layouts, components, and user interactions through practical coding challenges.</p>
+  </div>
+</div>
+
+<div class="experience-card">
+  <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80" alt="Programming workstation">
+  <div>
+    <h3>Algorithm Building</h3>
+    <p>Strengthen problem-solving with string, array, recursion, and search-based coding exercises.</p>
+  </div>
+</div>
+
+<div class="experience-card">
+  <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80" alt="Data and code">
+  <div>
+    <h3>Data Logic Training</h3>
+    <p>Understand data handling, transformations, filtering, and structured logic through guided challenges.</p>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <section class="card glass">
+      <h2>Gallery</h2>
+     <div class="gallery-grid">
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Developer desk">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="Laptop coding">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&w=900&q=80" alt="Team coding">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=900&q=80" alt="Code editor">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Developers collaborating">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=900&q=80" alt="Programming laptop">
+  </div>
+
+</div>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
