@@ -44,6 +44,11 @@ signupForm.addEventListener("submit", async event => {
   const email = document.getElementById("signupEmail").value.trim().toLowerCase();
   const password = document.getElementById("signupPassword").value.trim();
   const avatarFile = signupAvatar.files[0];
+  if (!avatarFile) {
+  signupMessage.style.color = "#ef4444";
+  signupMessage.textContent = "Please upload a profile image.";
+  return;
+}
 
   const users = getUsers();
   const existingUser = users.find(user => user.email === email);
@@ -53,15 +58,14 @@ signupForm.addEventListener("submit", async event => {
     signupMessage.textContent = "User already exists with this email.";
     return;
   }
-
-  const uploadedAvatar = avatarFile ? await fileToBase64(avatarFile) : null;
+const uploadedAvatar = await fileToBase64(avatarFile);
 
   const newUser = {
     id: Date.now(),
     username,
     email,
     password,
-    avatar: uploadedAvatar || generateAvatar(username),
+    avatar: uploadedAvatar,
     score: 0,
     streak: 0,
     badge: "Beginner",
