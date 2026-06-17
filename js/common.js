@@ -146,8 +146,9 @@ function setupLogout() {
 function setupNavbarAvatar() {
   const user = getCurrentUser();
   const navAvatar = document.getElementById("navUserAvatar");
+
   if (user && navAvatar) {
-    navAvatar.src = user.avatar;
+    navAvatar.src = user.avatar || generateAvatar(user.username);
   }
 }
 
