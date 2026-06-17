@@ -176,7 +176,7 @@ function fileToBase64(file) {
 
 function generateAvatar(username) {
   const seed = encodeURIComponent(username || "CodeQuest");
-  return `[api.dicebear.com](https://api.dicebear.com/7.x/adventurer/svg?seed=${seed})`;
+  return `https://api.dicebear.com/7.x/adventurer/svg?seed=${seed}`;
 }
 
 initAppData();

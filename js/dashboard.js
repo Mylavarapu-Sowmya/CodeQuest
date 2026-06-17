@@ -1,6 +1,8 @@
 redirectIfNotLoggedIn();
 setupTheme();
 setupLogout();
+setupNavbarAvatar();
+setupMobileMenu();
 
 function renderUserStats() {
   const user = getCurrentUser();

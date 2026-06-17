@@ -761,17 +761,17 @@ body.dark .progress-bar {
   .mobile-menu-btn {
     display: block;
   }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-  }
+.nav-links {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 15px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
 
   .nav-links.show {
     display: flex;
@@ -847,6 +847,11 @@ body.dark .progress-bar {
     width: 38px;
     height: 38px;
   }
+  .nav-links a,
+.nav-links button {
+  width: 100%;
+  text-align: center;
+}
 }
 #signupForm input {
   margin-bottom: 10px;
